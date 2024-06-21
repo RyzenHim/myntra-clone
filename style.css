@@ -193,6 +193,9 @@ nav .search {
 /* ** footer started **
 
 /* ** created using grid area ** */
+footer {
+  background: var(--footer-bgc);
+}
 .footer_main_container li,
 .footer_main_container a {
   list-style: none;
@@ -324,21 +327,64 @@ nav .search {
 /* ** card container started** */
 
 .card_div {
-  background-color: grey;
-  height: 40vh;
-  width: 12vw;
+  /* background-color: grey; */
+  /* height: 40vh; */
+  width: 210px;
   display: block;
   text-align: left;
+  margin: 1vw;
+  transition-duration: 0.2s;
+}
+.card_div:hover {
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
 .card_img_div {
   height: 280px;
-  width: 210px;
+  width: 100%;
   background-color: #4c5db3;
+  position: relative;
 }
 .card_img {
   height: 100%;
   width: 100%;
   /* opacity: 0; */
 }
-
+.card_rating {
+  position: absolute;
+  /* top: 0; */
+  bottom: 0.4vw;
+  padding: 0 0.5vw;
+  left: 0.5vw;
+  background-color: rgba(255, 255, 255, 0.78);
+}
+.card_details {
+  padding: 0.5vw;
+}
+.card_price_details {
+  display: flex;
+  gap: 0.4vw;
+  align-items: end;
+  /* font-weight: 600; */
+}
+.card_company {
+  font-weight: 600;
+  font-size: 1rem;
+}
+.card_name {
+  font-size: 1rem;
+  font-weight: 300;
+}
+.card_price {
+  font-size: 1rem;
+  font-weight: 500;
+}
+.card_price_off {
+  color: red;
+  font-size: 0.8rem;
+}
+.card_price_strikethrough {
+  text-decoration: line-through;
+  color: gray;
+  font-size: 0.8rem;
+}
 /* ** card container ended** */
