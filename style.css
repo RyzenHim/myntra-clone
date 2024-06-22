@@ -325,18 +325,37 @@ footer {
 /* ** created using grid column - row  ** */
 
 /* ** card container started** */
-
+.card_container {
+  position: relative;
+  display: flex;
+}
 .card_div {
   /* background-color: grey; */
   /* height: 40vh; */
   width: 210px;
   display: block;
   text-align: left;
-  margin: 1vw;
+  margin: 15px;
   transition-duration: 0.2s;
 }
 .card_div:hover {
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+.card_div:hover:after {
+  content: "you";
+  position: absolute;
+  top: 225px;
+  /* border: 1px solid black; */
+  left: 0;
+  width: 210px;
+  margin: 0 15px;
+  height: 100px;
+  background-color: rgb(255, 255, 255);
+  transition: 0.3s ease;
+}
+.card_button {
+  border: none;
+  background: ;
 }
 .card_img_div {
   height: 280px;
