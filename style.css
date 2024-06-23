@@ -10,9 +10,7 @@
   --main-bgc: #ffffff;
   --footer-bgc: #fafbfc;
 }
-body {
-  /* background-color: var(--bgc); */
-}
+
 .icon {
   width: 50px;
   height: 50px;
@@ -45,6 +43,7 @@ nav {
   height: 100%;
   align-items: center;
   gap: 2vw;
+  white-space: nowrap;
 }
 .nav_right {
   display: flex;
@@ -312,6 +311,9 @@ footer {
   width: 2.5vw;
   height: 2.5vw;
 }
+.original_img_text_bold {
+  font-weight: 600;
+}
 .original_div_one,
 .original_div_two {
   display: flex;
@@ -336,21 +338,12 @@ footer {
   text-align: left;
   margin: 15px;
   transition-duration: 0.2s;
+  position: relative;
+  overflow: hidden;
 }
 .card_div:hover {
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
-/* .card_div:hover:after {
-  content: "you";
-  position: absolute;
-  top: 225px;
-  left: 0;
-  width: 210px;
-  margin: 0 15px;
-  height: 100px;
-  background-color: rgb(255, 255, 255);
-  transition: 0.3s ease;
-} */
 
 /* ***card hover *** */
 .card_hover {
@@ -359,8 +352,7 @@ footer {
   background-color: #ffffff;
   width: 210px;
   height: 90px;
-  bottom: 53px;
-  transition-duration: 1s;
+  bottom: 40px;
 }
 .card_hover span {
   /* margin-left: 10px; */
@@ -373,6 +365,7 @@ footer {
 .card_div:hover .card_hover {
   /* background-color: #4c5db3; */
   display: block;
+  transition: ease-out 1s;
 }
 .card_div:hover .card_rating {
   opacity: 0;
@@ -386,10 +379,17 @@ footer {
   margin: 10px 5%;
   /* position: absolute; */
   border-radius: 3px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+.card_button_svg {
+  fill: grey;
 }
 .card_button:hover {
   bottom: 100px;
-  display: block;
+  /* display: block; */
   cursor: pointer;
   /* transition: 0.3s ease; */
   border: 1px solid black;
@@ -405,22 +405,78 @@ footer {
   width: 100%;
   /* opacity: 0; */
 }
-.card_rating {
+.card_view_similar {
   position: absolute;
+  z-index: -1;
+  /* right: 5px; */
+  bottom: 145px;
+  /* left: 185px; */
+  right: 10px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  gap: 5px;
+  flex-wrap: nowrap;
+  background: rgba(255, 255, 255, 0.767);
+  cursor: pointer;
+  transition: border-radius, width, justify-content ease-in 1s;
+  /* transition-duration: 0.8s; */
+  overflow: hidden;
+}
+.card_view_similar_svg {
+  fill: rgb(82, 81, 81);
+  height: 20px;
+  width: 20px;
+}
+.card_view_similar:hover::after {
+  content: "View Similar";
+  color: rgb(7, 7, 7);
+  font-size: 12px;
+  font-weight: 400;
+  white-space: nowrap;
+  transition-delay: 250ms;
+}
+.card_view_similar:hover {
+  width: 100px;
+  border-radius: 5px;
+  height: 25px;
+  justify-content: left;
+  padding-left: 5px;
+  border: 1px solid rgb(59, 59, 59);
+  /* transition: border-radius, width ease-in 0.5s; */
+}
+.card_div:hover .card_view_similar {
+  z-index: 2;
+}
+.card_rating {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  position: absolute;
+  font-size: 14px;
+  font-weight: 500;
   /* top: 0; */
-  bottom: 0.4vw;
-  padding: 0 0.5vw;
-  left: 0.5vw;
-  background-color: rgba(255, 255, 255, 0.78);
+  width: auto;
+  bottom: 6px;
+  left: 10px;
+  padding: 2px 8px;
+  background-color: rgba(255, 255, 255, 0.919);
   opacity: 1;
+  border-radius: 2px;
 }
 .card_details {
-  padding: 0.5vw;
+  padding: 10px;
   margin-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
 }
 .card_price_details {
   display: flex;
-  gap: 0.4vw;
+  gap: 12px;
   align-items: end;
   /* font-weight: 600; */
 }
