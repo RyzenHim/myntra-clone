@@ -333,7 +333,6 @@ footer {
   /* background-color: grey; */
   /* height: 40vh; */
   width: 210px;
-  display: block;
   text-align: left;
   margin: 15px;
   transition-duration: 0.2s;
@@ -341,25 +340,63 @@ footer {
 .card_div:hover {
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
-.card_div:hover:after {
+/* .card_div:hover:after {
   content: "you";
   position: absolute;
   top: 225px;
-  /* border: 1px solid black; */
   left: 0;
   width: 210px;
   margin: 0 15px;
   height: 100px;
   background-color: rgb(255, 255, 255);
   transition: 0.3s ease;
+} */
+
+/* ***card hover *** */
+.card_hover {
+  display: none;
+  position: absolute;
+  background-color: #ffffff;
+  width: 210px;
+  height: 90px;
+  bottom: 53px;
+  transition-duration: 1s;
+}
+.card_hover span {
+  /* margin-left: 10px; */
+  position: absolute;
+  left: 10px;
+  bottom: 10px;
+  font-size: 0.8rem;
+}
+/* ***card hoverended *** */
+.card_div:hover .card_hover {
+  /* background-color: #4c5db3; */
+  display: block;
+}
+.card_div:hover .card_rating {
+  opacity: 0;
 }
 .card_button {
   border: none;
-  background: ;
+  background: white;
+  border: 1px solid rgb(193, 191, 191);
+  width: 90%;
+  height: 30px;
+  margin: 10px 5%;
+  /* position: absolute; */
+  border-radius: 3px;
+}
+.card_button:hover {
+  bottom: 100px;
+  display: block;
+  cursor: pointer;
+  /* transition: 0.3s ease; */
+  border: 1px solid black;
 }
 .card_img_div {
   height: 280px;
-  width: 100%;
+  width: 210px;
   background-color: #4c5db3;
   position: relative;
 }
@@ -375,9 +412,11 @@ footer {
   padding: 0 0.5vw;
   left: 0.5vw;
   background-color: rgba(255, 255, 255, 0.78);
+  opacity: 1;
 }
 .card_details {
   padding: 0.5vw;
+  margin-bottom: 10px;
 }
 .card_price_details {
   display: flex;

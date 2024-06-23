@@ -21,19 +21,23 @@ cardContainer.innerHTML = `
           <div class="card_img_div">
             <img
               class="card_img"
-              src="${item.card_img}"
+              src="/assets/assets (1)/asset 9.jpeg"
               alt=""
             />
-            <span class="card_rating">${item.card_rating.card_rating}</span>
+            <div class="card_rating">4.5 ⭐😒</div>
           </div>
-          <button class="card_button" type="submit">Add To Cart</button>
+          <div class="card_hover">
+            <button class="card_button" type="submit">Add To Cart</button>
+            <span>Size : M</span>
+          </div>
+
           <div class="card_details">
-            <h4 class="card_company">${item.card_company}</h4>
-            <p class="card_name">${item.card_name}</p>
+            <h4 class="card_company">XYXX</h4>
+            <p class="card_name">Polo collar Cotton T-shirt</p>
             <div class="card_price_details">
-              <pc class="card_price">Rs. ${item.card_price_details.card_price}</pc>
-              <p class="card_price_strikethrough">Rs. ${item.card_price_details.card_price_strikethrough}</p>
-              <p class="card_price_off">(${item.card_price_details.card_price_off} % off) </p>
+              <pc class="card_price">Rs. 699</pc>
+              <p class="card_price_strikethrough">Rs 1499</p>
+              <p class="card_price_off">(45% off)</p>
             </div>
           </div>
- </div>`;
+        </div> `;
