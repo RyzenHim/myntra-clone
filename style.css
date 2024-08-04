@@ -330,18 +330,21 @@ footer {
 .card_container {
   position: relative;
   display: flex;
-  gap: 2vw;
-  justify-content: space-evenly;
+  flex-wrap: wrap;
+  gap: 2.5vw;
+  justify-content: space-around;
   /* align-items: center; */
   background: var(--main-bgc);
-  border: 1px solid red;
+  /* border: 1px solid red; */
+  padding: 40px 0px;
+  margin: 0 40px;
 }
 .card_div {
   /* background-color: grey; */
   /* height: 40vh; */
   /* width: 250px; */
   text-align: left;
-  margin: 15px;
+  /* margin: 15px; */
   transition-duration: 0.2s;
   position: relative;
   overflow: hidden;
@@ -427,14 +430,14 @@ footer {
   display: flex;
   gap: 5px;
   flex-wrap: nowrap;
-  background: rgba(255, 255, 255, 0.767);
+  background: rgba(255, 255, 255, 0.867);
   cursor: pointer;
   transition: border-radius, width, justify-content ease-in 1s;
-  /* transition-duration: 0.8s; */
+  transition-duration: 0.4s;
   overflow: hidden;
 }
 .card_view_similar_svg {
-  fill: rgb(82, 81, 81);
+  fill: tomato;
   height: 20px;
   width: 20px;
 }
@@ -445,6 +448,10 @@ footer {
   font-weight: 400;
   white-space: nowrap;
   transition-delay: 250ms;
+  color: tomato;
+  font-weight: 500;
+  padding-right: 6px;
+  width: 5rem;
 }
 .card_view_similar:hover {
   width: 100px;
@@ -452,8 +459,9 @@ footer {
   height: 25px;
   justify-content: left;
   padding-left: 5px;
-  border: 1px solid rgb(59, 59, 59);
+  border: 1px solid rgba(59, 59, 59, 0.458);
   /* transition: border-radius, width ease-in 0.5s; */
+  border-radius: 25px;
 }
 .card_div:hover .card_view_similar {
   z-index: 2;
