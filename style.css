@@ -330,16 +330,23 @@ footer {
 .card_container {
   position: relative;
   display: flex;
+  gap: 2vw;
+  justify-content: space-evenly;
+  /* align-items: center; */
+  background: var(--main-bgc);
+  border: 1px solid red;
 }
 .card_div {
   /* background-color: grey; */
   /* height: 40vh; */
-  width: 210px;
+  /* width: 250px; */
   text-align: left;
   margin: 15px;
   transition-duration: 0.2s;
   position: relative;
   overflow: hidden;
+  /* border: 1px solid black; */
+  background: white;
 }
 .card_div:hover {
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
