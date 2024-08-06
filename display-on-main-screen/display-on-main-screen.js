@@ -51,6 +51,4 @@ function displayOnMainScreen() {
   //     card_price_off: 45,
   //   },
   // };
-
-  cardContainer.innerHTML = innerHTML;
 }
