@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Myntra Clone</title>
     <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="sidePanel.css" />
+    <link rel="stylesheet" href="side-panel/sidePanel.css" />
     <link rel="shortcut icon" href="assets/myntra-2.svg" type="image/x-icon" />
   </head>
   <body>
@@ -159,9 +159,10 @@
     <aside>
       <div class="aside_card_container">
         <div class="aside_card_left">
-          <p>Flat 300 off</p>
+          <p class="aside_card_left_text">Flat ₹300 off</p>
         </div>
-        <div class="aside_card_right">
+        <div class="aside_main active" id="">
+        <div class="aside_card_right" >
           <div class="aside_right_upper">
             <div>
             <h4>Avail Flat</h4>
@@ -172,21 +173,25 @@
             </div>
           </div>
           <div class="aside_right_lower">
-            <p>Coupon Code : MYNTRA300</p>
+            <p class="coupon_code_text">Coupon Code : MYNTRA300</p>
             <P>Applicable on your forst order</P>
           </div>
         <div class="aside_footer">
           <div class="aside_footer_btn">
+            <img class="aside_footer_btn_img" src="side-panel/assets/verified_24dp_48752C_FILL0_wght700_GRAD200_opsz24.svg" alt="" srcset="">
             <p>Genuine Products</p>
           </div>
           <div class="aside_footer_btn">
-            <p>Tryh & Buy</p>
+            <img class="aside_footer_btn_img" src="side-panel/assets/apparel_24dp_48752C_FILL0_wght400_GRAD0_opsz48.svg" alt="" srcset="">
+            <p>Try & Buy</p>
           </div>
           <div class="aside_footer_btn">
-            <p>Easy Exchange And Retirns</p>
+            <img class="aside_footer_btn_img" src="side-panel/assets/sync_alt_24dp_48752C_FILL0_wght700_GRAD0_opsz24.svg" alt="" srcset="">
+            <p>Easy Exchange And Returns</p>
           </div>
         </div>
       </div>
+    </div>
     </aside>
     <!-- grid is starting -->
     <footer>
@@ -368,5 +373,6 @@
     <script src="display-on-main-screen/display-on-main-screen.js"></script>
     <script src="item-data/data.js"></script>
     <script src="app.js"></script>
+    <script src="side-panel/side-panel.js"></script>
   </body>
 </html>
